@@ -10,7 +10,7 @@ import { LoadingSpinner } from "./LoadingSpinner";
 type Tweet = {
   id: string;
   content: string;
-  createdAt: Date;
+  createAt: Date;
   likeCount: number;
   likedByMe: boolean;
   user: { id: string; image: string | null; name: string | null };
@@ -64,7 +64,7 @@ function TweetCard({
   id,
   user,
   content,
-  createdAt,
+  createAt,
   likeCount,
   likedByMe,
 }: Tweet) {
@@ -130,7 +130,7 @@ function TweetCard({
           </Link>
           <span className="text-gray-500">-</span>
           <span className="text-gray-500">
-            {dateTimeFormatter.format(createdAt)}
+            {dateTimeFormatter.format(createAt)}
           </span>
         </div>
         <p className="whitespace-pre-wrap">{content}</p>
